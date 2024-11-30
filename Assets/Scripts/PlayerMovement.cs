@@ -6,12 +6,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 15f;
     [SerializeField] private int maxJumpCounts = 2;
     private int jumpCount = 0;
+    private int holdedWeapon = 0;
+    
     private Vector2 movement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Animator animator;
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRenderer;
     private DialogueManager dialogueManager;
+    public PlayerAttack attackComponents;
     
     //Sliding
     [SerializeField] private bool isWallSliding;
@@ -35,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         dialogueManager = FindObjectOfType<DialogueManager>();
+        attackComponents = GetComponent<PlayerAttack>();
+
     }
 
     void Start()
@@ -51,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimation();
         WallSlide();
         WallJump();
+        Cast();
     }
 
     void FixedUpdate()
@@ -65,6 +71,18 @@ public class PlayerMovement : MonoBehaviour
         {
             rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, jumpForce);
             jumpCount++;
+        }
+    }
+
+    private void Cast()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            attackComponents.castSpell();
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            attackComponents.stopCasting();
         }
     }
 
