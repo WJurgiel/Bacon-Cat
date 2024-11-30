@@ -138,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateAnimation()
     {
-        bool hasInput = Mathf.Abs(Input.GetAxis("Horizontal")) > 0;
+        bool hasInput = Mathf.Abs(Input.GetAxis("Horizontal")) > 0f;
         bool isRunning = Mathf.Abs(rb2d.linearVelocity.x) > 0f;
         animator.SetBool("isRunning", isRunning || hasInput);
     }
