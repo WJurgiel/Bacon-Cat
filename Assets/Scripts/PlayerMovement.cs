@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRenderer;
+    private DialogueManager dialogueManager;
     
     //Sliding
     [SerializeField] private bool isWallSliding;
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     void Start()
@@ -43,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (dialogueManager.isDialogueActive) return;
         HandleHorizontalMovement();
         HandleJumpInput();
         UpdateAnimation();
