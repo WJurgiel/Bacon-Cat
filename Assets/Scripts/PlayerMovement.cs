@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (dialogueManager.isDialogueActive) return;
+        if (dialogueManager.isDialogueActive) return;
         HandleHorizontalMovement();
         HandleJumpInput();
         UpdateAnimation();

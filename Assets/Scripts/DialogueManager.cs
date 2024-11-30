@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour
     private bool isCorutineActive= false;
     private DialogueLine sentence;
     private DialogueData dialogueData;
-
+    [SerializeField] private float timeBetweenLetter = 0.01f;
     private void Awake()
     {
         readFromFile();
@@ -102,7 +102,7 @@ public class DialogueManager : MonoBehaviour
             foreach (char letter in sentence.text.ToCharArray())
             {
                 dialogueText.text += letter;
-                yield return null;
+                yield return new WaitForSeconds(timeBetweenLetter);
             }
             isCorutineActive = false;
     }
@@ -116,7 +116,7 @@ public class DialogueManager : MonoBehaviour
     
     IEnumerator ChangeDialogueActive()
     {
-        yield return null;
+        yield return new WaitForSeconds(timeBetweenLetter);
         isDialogueActive = false;
     }
 }
