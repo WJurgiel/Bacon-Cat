@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Firefly
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Water
   - UI
   - Wall
-  - 
+  - Background
   - 
   - 
   - 
@@ -41,6 +42,18 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4164158107
+    locked: 0
+  - name: Player
+    uniqueID: 852922889
+    locked: 0
+  - name: Map
+    uniqueID: 2552464269
+    locked: 0
+  - name: Actors
+    uniqueID: 3786988837
     locked: 0
   m_RenderingLayers:
   - Default

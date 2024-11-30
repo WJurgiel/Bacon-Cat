@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 4d8b664b36156be4f9bd55e17de6c745
+guid: 912b7664b3b44454bbcda01a99b85bea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7554498494277832466
-    second: Idle_1_0
+      213: -1340532279770573336
+    second: Grafika_bez_nazwy_0
+  - first:
+      213: -3711624583914485165
+    second: Grafika_bez_nazwy_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_1_0
+      name: Grafika_bez_nazwy_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 5
-        width: 255
-        height: 222
+        x: 630
+        y: 534
+        width: 252
+        height: 227
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee0b85815a7092790800000000000000
-      internalID: -7554498494277832466
+      spriteID: 8e594567ef8756de0800000000000000
+      internalID: -1340532279770573336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafika_bez_nazwy_1
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 538
+        width: 252
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a8b202b19ad7cc0800000000000000
+      internalID: -3711624583914485165
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2af298d5a2cbe3f4094335c8ec51d3e0
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Idle_1_0: -7554498494277832466
+      Grafika_bez_nazwy_0: -1340532279770573336
+      Grafika_bez_nazwy_1: -3711624583914485165
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
