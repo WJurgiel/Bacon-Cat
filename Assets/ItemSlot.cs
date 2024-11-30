@@ -1,16 +1,26 @@
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ItemSlot : MonoBehaviour
+public class ItemSlot : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [TextArea(3, 10), SerializeField] private string itemDescription; 
+    [SerializeField] private TMP_Text itemDescriptionText;
+
+    public void OnPointerEnter(PointerEventData eventData)
     {
+        if (itemDescription == null) return;
         
+        Debug.Log(itemDescriptionText);
+        itemDescriptionText.text = itemDescription;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        
+        if (itemDescription == null) return;
+        itemDescriptionText.text = "";
     }
+    
+    
 }

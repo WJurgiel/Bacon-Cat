@@ -19,8 +19,8 @@ public class EquipmentSystem : MonoBehaviour
 
     private string[] ItemDescription =
     {
-        "Moje zrodlo swiatla, lepiej zebym uzywal je z rozwaga",
-        "Dzieki tej kuli mocy moge pokonywac przeciwnikow",
+        "",
+        "",
         "Bekon",
         "Kocia Lapa"
     };
