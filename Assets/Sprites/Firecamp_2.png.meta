@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: df11d9e700bc9054ca666fcaed3a7c5c
+guid: 4deda2d1af815524787d2aabf049904e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4638073604318642339
-    second: Bacon_0
+      213: -6138200939913441418
+    second: Firecamp_2_0
   - first:
-      213: 46726371528118730
-    second: Bacon_1
+      213: 7740403373747460377
+    second: Firecamp_2_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bacon_0
+      name: Firecamp_2_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 36
-        width: 215
-        height: 165
+        x: 43
+        y: 29
+        width: 168
+        height: 218
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a0478b9e5fbd5040800000000000000
-      internalID: 4638073604318642339
+      spriteID: 67f8d7844cab0daa0800000000000000
+      internalID: -6138200939913441418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bacon_1
+      name: Firecamp_2_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 50
-        width: 19
-        height: 10
+        x: 125
+        y: 192
+        width: 9
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac19398236106a000800000000000000
-      internalID: 46726371528118730
+      spriteID: 919d376abdf6b6b60800000000000000
+      internalID: 7740403373747460377
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 672b69373eb9ed9418102acfe3df03e0
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bacon_0: 4638073604318642339
-      Bacon_1: 46726371528118730
+      Firecamp_2_0: -6138200939913441418
+      Firecamp_2_1: 7740403373747460377
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

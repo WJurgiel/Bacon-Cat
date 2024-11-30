@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: df11d9e700bc9054ca666fcaed3a7c5c
+guid: c729e452e03652042a8e25fb54f2e51c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4638073604318642339
-    second: Bacon_0
+      213: 372287839227939782
+    second: Firecamp_0
   - first:
-      213: 46726371528118730
-    second: Bacon_1
+      213: -1730108480863745444
+    second: Firecamp_1
+  - first:
+      213: -5901239442186474968
+    second: Firecamp_2
+  - first:
+      213: -8184628538348939392
+    second: Firecamp_3
+  - first:
+      213: 7452567008907065895
+    second: Firecamp_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bacon_0
+      name: Firecamp_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 36
-        width: 215
-        height: 165
+        x: 43
+        y: 29
+        width: 168
+        height: 218
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a0478b9e5fbd5040800000000000000
-      internalID: 4638073604318642339
+      spriteID: 6cb016b31d1aa2500800000000000000
+      internalID: 372287839227939782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bacon_1
+      name: Firecamp_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 50
-        width: 19
-        height: 10
+        x: 114
+        y: 236
+        width: 9
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac19398236106a000800000000000000
-      internalID: 46726371528118730
+      spriteID: c5ac93fc08b6df7e0800000000000000
+      internalID: -1730108480863745444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firecamp_2
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 225
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a63f15ef59a1ea0800000000000000
+      internalID: -5901239442186474968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firecamp_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 214
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087df2955bb5a6e80800000000000000
+      internalID: -8184628538348939392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firecamp_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 203
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a73be8536dc6760800000000000000
+      internalID: 7452567008907065895
       vertices: []
       indices: 
       edges: []
@@ -150,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4f54b6c94d434f24bad3fa46ed97abe0
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bacon_0: 4638073604318642339
-      Bacon_1: 46726371528118730
+      Firecamp_0: 372287839227939782
+      Firecamp_1: -1730108480863745444
+      Firecamp_2: -5901239442186474968
+      Firecamp_3: -8184628538348939392
+      Firecamp_4: 7452567008907065895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
