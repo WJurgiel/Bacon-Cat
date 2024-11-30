@@ -51,5 +51,8 @@ TagManager:
   - name: Map
     uniqueID: 2552464269
     locked: 0
+  - name: Actors
+    uniqueID: 3786988837
+    locked: 0
   m_RenderingLayers:
   - Default
