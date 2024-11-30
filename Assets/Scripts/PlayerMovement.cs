@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRenderer;
     private DialogueManager dialogueManager;
+    [SerializeField] private EquipmentSystem equipmentSystem;
     public PlayerAttack attackComponents;
     
     //Sliding
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         dialogueManager = FindObjectOfType<DialogueManager>();
         attackComponents = GetComponent<PlayerAttack>();
 
+        equipmentSystem = GetComponentInChildren<EquipmentSystem>();
     }
 
     void Start()
@@ -50,7 +52,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dialogueManager.isDialogueActive) return;
+        // if (dialogueManager.isDialogueActive) return;
+        if (equipmentSystem.GetPanel().activeSelf)
+        {
+            StopPlayer();
+            UpdateAnimation();
+            return;
+        }
         HandleHorizontalMovement();
         HandleJumpInput();
         UpdateAnimation();
@@ -61,6 +69,12 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (equipmentSystem.GetPanel().activeSelf)
+        {
+            StopPlayer();
+            UpdateAnimation();
+            return;
+        }
         rb2d.linearVelocity = new Vector2(movement.x * speed, rb2d.linearVelocity.y);
         
     }
@@ -142,6 +156,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void StopPlayer()
+    {
+        rb2d.linearVelocity = Vector2.zero;
+    }
     private void HandleHorizontalMovement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");

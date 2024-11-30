@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9010856698443863900}
   - component: {fileID: 6550256549246576289}
-  - component: {fileID: 5162900565253652529}
+  - component: {fileID: 366783377122347331}
   m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
@@ -270,7 +270,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &5162900565253652529
+--- !u!114 &366783377122347331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,6 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   containerCapacity: 5
   outerLightRadiusAdder: 5
+  timeBetweenConsuming: 20
 --- !u!1 &5102980456049890175
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,10 +298,10 @@ GameObject:
   - component: {fileID: 534112199941696341}
   - component: {fileID: 4678660320948032557}
   - component: {fileID: 4400499472814822016}
-  - component: {fileID: 7680777133487531750}
-  - component: {fileID: 925188459683338714}
+  - component: {fileID: 2946724650982138771}
   - component: {fileID: 665773844078220672}
   - component: {fileID: 9190150437588020700}
+  - component: {fileID: 4355257412124304363}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -469,6 +470,7 @@ MonoBehaviour:
   speed: 10
   jumpForce: 15
   maxJumpCounts: 2
+  equipmentSystem: {fileID: 0}
   isWallSliding: 0
   wallSlidingSpeed: 5
   wallCheck: {fileID: 8279846682367238748}
@@ -478,7 +480,7 @@ MonoBehaviour:
   wallJumpingTime: 0.2
   wallJumpingPower: {x: 8, y: 16}
   wallJumpingDuration: 0
---- !u!114 &7680777133487531750
+--- !u!114 &2946724650982138771
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -490,19 +492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77859414828f5414bb5aaa703822efca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &925188459683338714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5102980456049890175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9759e9206682e724badaae6de915670e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AttackBall: {fileID: 110021034024120303}
 --- !u!95 &665773844078220672
 Animator:
   serializedVersion: 7
@@ -583,6 +572,27 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+--- !u!114 &4355257412124304363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102980456049890175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d83b12e7d0a03748917d45ffe8acb98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipmentPanel: {fileID: 0}
+  maxFireFlies: 10
+  currentFireFlies: 0
+  FireFliesText: {fileID: 0}
+  ItemImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8326339377196052436
 GameObject:
   m_ObjectHideFlags: 0
