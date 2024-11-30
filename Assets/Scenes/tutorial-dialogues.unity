@@ -7306,6 +7306,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 537942718}
   dialogueText: {fileID: 866383345}
+  dialogueCanvas: {fileID: 1299537688}
+  isDialogueActive: 0
 --- !u!1 &1166348707
 GameObject:
   m_ObjectHideFlags: 0
@@ -7460,7 +7462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1299537685
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7843,7 +7845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4678660320948032557, guid: 90c5be523a667784eafa4ebdd647d7c4, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.17
+      value: 1.99
       objectReference: {fileID: 0}
     - target: {fileID: 5102980456049890175, guid: 90c5be523a667784eafa4ebdd647d7c4, type: 3}
       propertyPath: m_Name
@@ -8153,8 +8155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -114, y: 256}
-  m_SizeDelta: {x: 602.3582, y: 127.3188}
+  m_AnchoredPosition: {x: -578.1881, y: 339.92175}
+  m_SizeDelta: {x: 345.9819, y: 111.4753}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2028770594
 MonoBehaviour:

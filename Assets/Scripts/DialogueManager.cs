@@ -8,21 +8,48 @@ public class DialogueManager : MonoBehaviour
 {
     public TMP_Text nameText;
     public TMP_Text dialogueText;
+    public Canvas dialogueCanvas;
     private Queue<string> sentences;
+    public bool isDialogueActive = false;
+    private bool isCorutineActive= false;
+    private string sentence;
     void Start()
     {
         sentences = new Queue<string>();
     }
 
+    void Update()
+    {
+        if (isDialogueActive) ChangeSentence();
+        
+    }
+
+    private void ChangeSentence()
+    {
+        if (Input.anyKeyDown)
+        {
+            if (isCorutineActive)
+            {
+                isCorutineActive = false;
+                StopAllCoroutines();
+                dialogueText.text = sentence;
+            }
+            else
+            {
+                DisplayNextSentence();
+                
+            }
+        }
+    }
+
     public void StartDialogue(Dialogue dialogue)
     {
+        isDialogueActive = true;
         nameText.text = dialogue.name;
         sentences.Clear();
-        foreach (String sentence in dialogue.sentences)
-        {
-            sentences.Enqueue(sentence);
-        }
-
+        foreach (String sentence in dialogue.sentences) sentences.Enqueue(sentence);
+        
+        dialogueCanvas.gameObject.SetActive(true);
         DisplayNextSentence();
     }
 
@@ -33,12 +60,25 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-        string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
+        sentence = sentences.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
     }
 
+    IEnumerator TypeSentence(string sentence)
+    {
+        isCorutineActive = true;
+            dialogueText.text = "";
+            foreach (char letter in sentence.ToCharArray())
+            {
+                dialogueText.text += letter;
+                yield return null;
+            }
+            isCorutineActive = false;
+    }
     void EndDialogue()
     {
-        Debug.Log("Ending Dialogue");
+        isDialogueActive = false;
+        dialogueCanvas.gameObject.SetActive(false);
     }
 }
