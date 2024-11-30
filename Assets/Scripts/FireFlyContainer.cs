@@ -8,7 +8,6 @@ public class FireFlyContainer : MonoBehaviour
     [SerializeField] private int containerCapacity = 5;
 
     [SerializeField] private int outerLightRadiusAdder = 3;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         light = GetComponent<Light2D>();
@@ -34,6 +33,18 @@ public class FireFlyContainer : MonoBehaviour
     {
         light.pointLightInnerRadius = containerCapacity;
         light.pointLightOuterRadius = containerCapacity +outerLightRadiusAdder;
+    }
+
+    public void IncreaseLight()
+    {
+        containerCapacity++;
+        UpdateContainerLight();
+    }
+
+    public void DecreaseLight()
+    {
+        containerCapacity--;
+        UpdateContainerLight();
     }
     
 }
