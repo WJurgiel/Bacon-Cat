@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 053d965ed0a5c5e4980ff59998407ea7
+guid: 6b2a9e03fe5f8d445937eadbd11f09b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8596640243658272642
-    second: Enemy_0
+      213: 3682263583909060376
+    second: Orb_3_0
   - first:
-      213: -7642239419928554605
-    second: Enemy_1
+      213: 1456759678377430216
+    second: Orb_3_1
+  - first:
+      213: -6646034151387661162
+    second: Orb_3_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy_0
+      name: Orb_3_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 45
-        width: 315
-        height: 174
+        x: 0
+        y: 8
+        width: 241
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 28f241131c66d4770800000000000000
-      internalID: 8596640243658272642
+      spriteID: 81f914858370a1330800000000000000
+      internalID: 3682263583909060376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_1
+      name: Orb_3_1
       rect:
         serializedVersion: 2
-        x: 281
-        y: 36
-        width: 10
-        height: 10
+        x: 244
+        y: 251
+        width: 6
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +143,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 393dba6ecbf41f590800000000000000
-      internalID: -7642239419928554605
+      spriteID: 8cc8cc09533773410800000000000000
+      internalID: 1456759678377430216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orb_3_2
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 62
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c7c69c62b84c3a0800000000000000
+      internalID: -6646034151387661162
       vertices: []
       indices: 
       edges: []
@@ -160,8 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Enemy_0: 8596640243658272642
-      Enemy_1: -7642239419928554605
+      Orb_3_0: 3682263583909060376
+      Orb_3_1: 1456759678377430216
+      Orb_3_2: -6646034151387661162
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
