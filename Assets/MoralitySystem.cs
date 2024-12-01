@@ -7,6 +7,7 @@ public class MoralitySystem : MonoBehaviour
     public void addMoralPoint()
     {
         moralityPoints++;
+        Debug.Log("Moral :" + moralityPoints);
     }
 
     public int GetMoralityPoints()

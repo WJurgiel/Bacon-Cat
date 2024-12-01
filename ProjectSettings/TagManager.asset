@@ -14,6 +14,7 @@ TagManager:
   - Key
   - SpellBook
   - AudioManager
+  - EndGame
   layers:
   - Default
   - TransparentFX

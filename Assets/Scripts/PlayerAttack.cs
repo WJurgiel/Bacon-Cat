@@ -21,18 +21,11 @@ public class PlayerAttack : MonoBehaviour
     public float[] range = { 0f, 15f, 5f, 6f };
     public float damage = 0f;
     static private int level = 1;
-    private Sprite[] sprites = new Sprite[4];
-
+    [SerializeField] Sprite[] sprites = new Sprite[4];
+    
 
     private void Awake()
     {
-        sprites[0] = null;
-        string path1 = "Assets/Sprites/Orb_1.png"; 
-        sprites[1] = AssetDatabase.LoadAssetAtPath<Sprite>(path1);
-        string path2 = "Assets/Sprites/Orb_2.png"; 
-        sprites[2] = AssetDatabase.LoadAssetAtPath<Sprite>(path2);
-        string path3 = "Assets/Sprites/Orb_3.png"; 
-        sprites[3] = AssetDatabase.LoadAssetAtPath<Sprite>(path3);
         speed.Append(0.0f);
         speed.Append(0.1f);
         speed.Append(0.15f);
