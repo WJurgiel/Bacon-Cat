@@ -8,6 +8,7 @@ public class NpcHandler : MonoBehaviour
     [SerializeField] private GameObject userHint;
     [SerializeField] private InventoryItems requiredItem;
     [SerializeField] private EquipmentSystem equipmentSystem;
+    [SerializeField] private MoralitySystem moralitySystem;
     private DialogueManager dialogueManager;
     private DialogueTrigger dialogueTrigger;
     private bool isPlayerInRange;
@@ -17,6 +18,7 @@ public class NpcHandler : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         equipmentSystem = FindObjectOfType<EquipmentSystem>();
+        moralitySystem = FindObjectOfType<MoralitySystem>();
         dialogueManager = FindObjectOfType<DialogueManager>();
         dialogueTrigger = FindObjectOfType<DialogueTrigger>();
         isPlayerInRange = false;
@@ -62,10 +64,7 @@ public class NpcHandler : MonoBehaviour
         if (equipmentSystem.GetPickedUpItems()[(int)requiredItem])
         {
             dialogueLineID = 2;
-        }
-        else
-        {
-            Debug.Log(">:(");
+            moralitySystem.addMoralPoint();
         }
     }
     

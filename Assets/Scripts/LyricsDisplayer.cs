@@ -33,7 +33,7 @@ public class LyricsDisplayer : MonoBehaviour
 
     private void Awake()
     {
-        audioManagerIntro = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManagerIntro>();
+        audioManagerIntro = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerIntro>();
 
         if (audioManagerIntro != null)
         {
@@ -117,7 +117,7 @@ public class LyricsDisplayer : MonoBehaviour
     private IEnumerator ChangeSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(endSceneName);
+        SceneManager.LoadScene(1);
     }
 
     private void SkipIntro()

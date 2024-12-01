@@ -7,11 +7,15 @@ public class PlayerInteraction : MonoBehaviour
     FireFlyContainer fireFlyContainer;
     EquipmentSystem equipmentSystem;
     SanitySystem sanitySystem;
+    MoralitySystem moralitySystem;
+    [SerializeField] private GameObject goodEndingPanel;
+    [SerializeField] private GameObject badEndingPanel;
     void Start()
     {
         fireFlyContainer = FindObjectOfType<FireFlyContainer>();
         equipmentSystem = FindObjectOfType<EquipmentSystem>();
         sanitySystem = FindObjectOfType<SanitySystem>();
+        moralitySystem = FindObjectOfType<MoralitySystem>();
         
         Debug.Log(fireFlyContainer);
         
@@ -46,6 +50,20 @@ public class PlayerInteraction : MonoBehaviour
         {
             Destroy(other.gameObject);
             equipmentSystem.GiveOrb();
+        }
+
+        if (other.transform.CompareTag("EndGame"))
+        {
+            Debug.Log("Koniec");
+            if (moralitySystem.GetMoralityPoints() >= 2)
+            {
+                goodEndingPanel.SetActive(true);
+                Debug.Log(goodEndingPanel);
+            }
+            else
+            {
+                badEndingPanel.SetActive(true);
+            }
         }
     }
 }
