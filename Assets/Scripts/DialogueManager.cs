@@ -42,17 +42,19 @@ public class DialogueManager : MonoBehaviour
     }
     private void readFromFile()
     {
-        string filePath = Application.dataPath + $"/Dialogues/{filePaths[CurrentFileIndex]}.json";
-        // string filePath = Application.dataPath + "/Dialogues/tutorial.json";
-        
-        if (File.Exists(filePath))
+        // Construct the path to the JSON file in the Resources folder
+        string resourcePath = $"Dialogues/{filePaths[CurrentFileIndex]}";
+
+        // Load the TextAsset from Resources
+        TextAsset jsonFile = Resources.Load<TextAsset>(resourcePath);
+
+        if (jsonFile != null)
         {
-            string jsonContent = File.ReadAllText(filePath);
-            dialogueData = JsonUtility.FromJson<DialogueData>(jsonContent);
+            dialogueData = JsonUtility.FromJson<DialogueData>(jsonFile.text);
         }
         else
         {
-            Debug.LogError($"Nie znaleziono pliku JSON pod ścieżką: {filePath}");
+            Debug.LogError($"Nie znaleziono pliku JSON pod ścieżką: {resourcePath} w folderze Resources.");
         }
     }
 

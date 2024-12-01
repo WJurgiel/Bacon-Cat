@@ -1,0 +1,52 @@
+{
+  "dialogSequences": [
+    {
+      "id": 1,
+      "conversation": [
+        {
+          "character": "Chocoloco",
+          "text": "Ha, stary znajomy, prawda? Nie sadzilem, ze wrocisz."
+        },
+
+        {
+          "character": "Ty",
+          "text": "Zawsze cie pamietalem, Chocoloco. Ale co cie tu trzyma?"
+        },
+
+        {
+          "character": "Chocoloco",
+          "text": "Ach, nic wielkiego. Potrzebuje swietlistego klucza, ale moje lapy..."
+        },
+        {
+          "character": "Chocoloco",
+          "text": "no wiesz, nie sa dosc czyste. Ty jednak – nieskazitelny, prawda?"
+        },
+
+        {
+          "character": "Ty",
+          "text": "Po co mialbym ci pomagac? Moge ci zaufac?"
+        },
+
+        {
+          "character": "Chocoloco",
+          "text": "Zaufanie? Heh, nigdy nie było moja mocna strona. Ale pamietaj, ile razy cie ratowalem."
+        },
+        {
+          "character": "Chocoloco",
+          "text": "Po prostu przynies klucz, co ci szkodzi?"
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "conversation": [
+        {
+          "character": "Chocoloco",
+          "text": "Wiedzialem, ze sie spiszesz. Klucz to jedno, ale pamietaj – otchlan moze byc zarowno twoim sprzymierzencem, jak i wrogiem. Uwazaj na siebie."
+        }
+      ]
+    }
+
+  ]
+}
