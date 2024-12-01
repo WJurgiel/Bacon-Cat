@@ -13,6 +13,8 @@ TagManager:
   - Pouch
   - Key
   - SpellBook
+  - Audiomanager
+  - AudioManager
   layers:
   - Default
   - TransparentFX
