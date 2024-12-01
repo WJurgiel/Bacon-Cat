@@ -345,6 +345,7 @@ MonoBehaviour:
   userHint: {fileID: 5969254879750545769}
   requiredItem: 3
   equipmentSystem: {fileID: 0}
+  moralitySystem: {fileID: 0}
 --- !u!114 &4875009262303404174
 MonoBehaviour:
   m_ObjectHideFlags: 0
