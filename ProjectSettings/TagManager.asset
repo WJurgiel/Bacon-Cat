@@ -20,6 +20,7 @@ TagManager:
   - d7
   - d8
   - d9
+  - EnemyTrigger
   layers:
   - Default
   - TransparentFX

@@ -55,5 +55,20 @@ public class PlayerInteraction : MonoBehaviour
             other.gameObject.GetComponent<dtrigger>().StartDialogue(5);
             other.gameObject.SetActive(false);
         }
+        if (other.transform.CompareTag("d6"))
+        {
+            other.gameObject.GetComponent<dtrigger>().StartDialogue(6);
+            other.gameObject.SetActive(false);
+        }
+        if (other.transform.CompareTag("d8"))
+        {
+            other.gameObject.GetComponent<dtrigger>().StartDialogue(8);
+            other.gameObject.SetActive(false);
+        }
+        if (other.transform.CompareTag("d9"))
+        {
+            other.gameObject.GetComponent<dtrigger>().StartDialogue(9);
+            other.gameObject.SetActive(false);
+        }
     }
 }
