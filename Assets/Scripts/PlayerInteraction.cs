@@ -16,9 +16,9 @@ public class PlayerInteraction : MonoBehaviour
         equipmentSystem = FindObjectOfType<EquipmentSystem>();
         sanitySystem = FindObjectOfType<SanitySystem>();
         moralitySystem = FindObjectOfType<MoralitySystem>();
-        
+
         Debug.Log(fireFlyContainer);
-        
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,7 +26,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             equipmentSystem.AddFirefly();
             Destroy(other.gameObject);
-            
+
         }
 
         if (other.transform.CompareTag("Bacon"))
@@ -75,34 +75,35 @@ public class PlayerInteraction : MonoBehaviour
             other.gameObject.GetComponent<dtrigger>().StartDialogue(9);
             other.gameObject.SetActive(false);
 
-        if (other.transform.CompareTag("Pouch"))
-        {
-            Destroy(other.gameObject);
-            equipmentSystem.GivePouch();
-        }
-
-        if (other.transform.CompareTag("Key"))
-        {
-            Destroy(other.gameObject);
-            equipmentSystem.GiveKey();
-        }
-        if (other.transform.CompareTag("SpellBook"))
-        {
-            Destroy(other.gameObject);
-            equipmentSystem.GiveOrb();
-        }
-
-        if (other.transform.CompareTag("EndGame"))
-        {
-            Debug.Log("Koniec");
-            if (moralitySystem.GetMoralityPoints() >= 2)
+            if (other.transform.CompareTag("Pouch"))
             {
-                goodEndingPanel.SetActive(true);
-                Debug.Log(goodEndingPanel);
+                Destroy(other.gameObject);
+                equipmentSystem.GivePouch();
             }
-            else
+
+            if (other.transform.CompareTag("Key"))
             {
-                badEndingPanel.SetActive(true);
+                Destroy(other.gameObject);
+                equipmentSystem.GiveKey();
+            }
+            if (other.transform.CompareTag("SpellBook"))
+            {
+                Destroy(other.gameObject);
+                equipmentSystem.GiveOrb();
+            }
+
+            if (other.transform.CompareTag("EndGame"))
+            {
+                Debug.Log("Koniec");
+                if (moralitySystem.GetMoralityPoints() >= 2)
+                {
+                    goodEndingPanel.SetActive(true);
+                    Debug.Log(goodEndingPanel);
+                }
+                else
+                {
+                    badEndingPanel.SetActive(true);
+                }
             }
         }
     }

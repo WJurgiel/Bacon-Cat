@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
     
-    AudioManagerTutorial audioManager;
+   // AudioManagerTutorial audioManager;
     //Wall Jumping
     private bool isWallJumping;
     private float wallJumpingDirection;
@@ -44,13 +44,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float wallJumpingDuration = 0.5f;
     private void Awake()
     {   
-        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManagerTutorial>();
+        //audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManagerTutorial>();
 
-        if (audioManager != null)
+/*        if (audioManager != null)
         {
             // Ustaw zapętlanie i odtwórz dźwięk za pomocą AudioManagerIntro
             audioManager.PlayLoopedSound();
-        }
+        }*/
         
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         isDead = true;
     }
     // Update is called once per frame
-    void Update()
+    void Update() { 
 
 
         if (isDead) return;
