@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000992d6328d832398
+  m_ApplyToSortingLayers: 000000000992d6328d83239825ddb8e1
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -150,9 +150,10 @@ GameObject:
   - component: {fileID: 4355257412124304363}
   - component: {fileID: 6210496654379764108}
   - component: {fileID: 7608171297437332708}
+  - component: {fileID: 8278196995197231062}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -318,7 +319,7 @@ MonoBehaviour:
   speed: 10
   jumpForce: 15
   maxJumpCounts: 2
-  spellPrefab: {fileID: 0}
+  spellPrefab: {fileID: 612515680063727160, guid: 13049a6a41b268f49ae477a402807219, type: 3}
   orbSpawner: {fileID: 452416612161330153}
   camera: {fileID: 0}
   equipmentSystem: {fileID: 4355257412124304363}
@@ -486,13 +487,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSanity: 100
   currentSanity: 0
-  baconRegainAmount: 10
+  baconRegainAmount: 40
   eyesInTheShadow: {fileID: 0}
   eyesRenderer:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  timeToDisolve: 2
+--- !u!114 &8278196995197231062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102980456049890175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df08063ab7199bf42b70828de958ffdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8326339377196052436
 GameObject:
   m_ObjectHideFlags: 0

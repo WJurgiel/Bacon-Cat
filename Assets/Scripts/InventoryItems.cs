@@ -4,7 +4,8 @@ namespace DefaultNamespace
     {
         FIREFLIES,
         ORB,
-        BACON,
-        PAW
+        KEY,
+        POUCH,
+        
     }
 }

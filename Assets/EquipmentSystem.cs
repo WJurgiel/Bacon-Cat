@@ -39,11 +39,11 @@ public class EquipmentSystem : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            GiveBacon();
+            GiveKey();
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            GivePaw();
+            GivePouch();
         }
     }
 
@@ -52,6 +52,10 @@ public class EquipmentSystem : MonoBehaviour
         return equipmentPanel;
     }
 
+    public List<bool> GetPickedUpItems()
+    {
+        return PickedUpItems;
+    }
     public int GetFireFlies()
     {
         return currentFireFlies;
@@ -97,16 +101,16 @@ public class EquipmentSystem : MonoBehaviour
         ItemImages[(int)InventoryItems.ORB].SetActive(true);
     }
 
-    public void GiveBacon()
+    public void GiveKey()
     {
-        PickedUpItems[(int)InventoryItems.BACON] = true;
-        ItemImages[(int)InventoryItems.BACON].SetActive(true);
+        PickedUpItems[(int)InventoryItems.KEY] = true;
+        ItemImages[(int)InventoryItems.KEY].SetActive(true);
     }
 
-    public void GivePaw()
+    public void GivePouch()
     {
-        PickedUpItems[(int)InventoryItems.PAW] = true;
-        ItemImages[(int)InventoryItems.PAW].SetActive(true);
+        PickedUpItems[(int)InventoryItems.POUCH] = true;
+        ItemImages[(int)InventoryItems.POUCH].SetActive(true);
     }
     
 }

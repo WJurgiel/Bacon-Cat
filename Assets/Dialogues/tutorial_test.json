@@ -1,0 +1,20 @@
+{
+    "dialogSequences": [
+        {
+            "id": 1,
+            "conversation": [
+                { "character": "Hero", "text": "Hello! How are you today?" },
+                { "character": "NPC", "text": "I'm fine, thank you! And you?" },
+                { "character": "Hero", "text": "I'm doing well. Nice weather we're having!" }
+            ]
+        },
+        {
+            "id": 2,
+            "conversation": [
+                { "character": "NPC", "text": "Have you heard the latest news?" },
+                { "character": "Hero", "text": "No, what happened?" },
+                { "character": "NPC", "text": "They say the old castle is haunted." }
+            ]
+        }
+    ]
+}
