@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -70,6 +71,10 @@ public class PlayerMovement : MonoBehaviour
         WallSlide();
         WallJump();
         Cast();
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            attackComponents.upgrade();
+        }
     }
 
     void FixedUpdate()
@@ -110,7 +115,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition = camera.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 1));
-            moveDirection = (mousePosition - transform.position).normalized;
+            Debug.Log(mousePosition - orbSpawner.transform.position);
+            moveDirection = (mousePosition - orbSpawner.transform.position).normalized;
+            Debug.Log("2:");
+            Debug.Log(moveDirection);
             attackComponents.stopCasting(moveDirection);
         }
     }
