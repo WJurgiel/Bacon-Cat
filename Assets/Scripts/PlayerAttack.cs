@@ -17,8 +17,8 @@ public class PlayerAttack : MonoBehaviour
     private int numberOfMoves = 100;
     private GameObject spawner = null;
     public bool isSpelling = false;
-    public float[] damageMultipliers = {0f, 210f, 210f, 210f};
-    public float[] range = { 0f, 10f, 5f, 6f };
+    public float[] damageMultipliers = {0f, 310f, 210f, 210f};
+    public float[] range = { 0f, 15f, 5f, 6f };
     public float damage = 0f;
     static private int level = 1;
     private Sprite[] sprites = new Sprite[4];
@@ -83,16 +83,16 @@ public class PlayerAttack : MonoBehaviour
 
     IEnumerator MoveSpell(Vector3 moveDirection)
     {
-        float t = range[level] / moveDirection.magnitude;
+        float t = 50f / moveDirection.magnitude;
         Vector3 moveVector = spawner.transform.position + moveDirection * t;
         while (Vector3.Distance(transform.position, moveVector) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, moveVector, 0.01f);
-            transform.position += (moveDirection * 0.1f);
+            transform.position = Vector3.MoveTowards(transform.position, moveVector, 0.02f);
+            transform.position += (moveDirection * 0.2f);
             light.transform.position = transform.position;
             yield return new WaitForSeconds(0.005f);
-            // }
-            Destroy(gameObject);
         }
+        Destroy(gameObject);
+                                                                  
     }
 }
