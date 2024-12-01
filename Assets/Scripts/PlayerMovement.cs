@@ -6,13 +6,21 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 15f;
     [SerializeField] private int maxJumpCounts = 2;
     private int jumpCount = 0;
+    private int holdedWeapon = 0;
+    private Vector3 moveDirection;
+    public GameObject spellPrefab;
+    private GameObject spawnedSpell;
+    public GameObject orbSpawner;
+    
     private Vector2 movement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Animator animator;
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRenderer;
     private DialogueManager dialogueManager;
+    public Camera camera;
     [SerializeField] private EquipmentSystem equipmentSystem;
+    private PlayerAttack attackComponents;
     
     //Sliding
     [SerializeField] private bool isWallSliding;
@@ -36,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         dialogueManager = FindObjectOfType<DialogueManager>();
+        attackComponents = GetComponent<PlayerAttack>();
         equipmentSystem = GetComponentInChildren<EquipmentSystem>();
     }
 
@@ -54,11 +63,13 @@ public class PlayerMovement : MonoBehaviour
             UpdateAnimation();
             return;
         }
+
         HandleHorizontalMovement();
         HandleJumpInput();
         UpdateAnimation();
         WallSlide();
         WallJump();
+        Cast();
     }
 
     void FixedUpdate()
@@ -79,6 +90,26 @@ public class PlayerMovement : MonoBehaviour
         {
             rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, jumpForce);
             jumpCount++;
+        }
+    }
+
+    private void Cast()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 spawnPosition = orbSpawner.transform.position;
+            Quaternion spawnRotation = Quaternion.identity;
+            spawnedSpell = Instantiate(spellPrefab, spawnPosition, spawnRotation);
+            attackComponents = spawnedSpell.GetComponent<PlayerAttack>();
+            attackComponents.castSpell(orbSpawner);
+
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition = camera.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 1));
+            moveDirection = (mousePosition - transform.position).normalized;
+            attackComponents.stopCasting(moveDirection);
         }
     }
 
