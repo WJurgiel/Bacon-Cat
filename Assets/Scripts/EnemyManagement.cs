@@ -9,10 +9,6 @@ public class EnemyManagement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            SpawnObjectInRange();
-        }
     }
     
     public void SpawnObjectInRange()

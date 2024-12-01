@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    static private int dialogueLineID = 1;
+    public int dialogueLineID = 1;
 
     public void UpdateDialogueLineID(int dialogueLineID)
     {
-        // this.dialogueLineID = dialogueLineID;
+        this.dialogueLineID = dialogueLineID;
     }
     public void TriggerDialogue()
     {
