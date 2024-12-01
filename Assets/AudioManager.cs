@@ -8,6 +8,9 @@ public class AudioManager : MonoBehaviour
 
     [Header("--Audio Clip ----")]
     public AudioClip background;
+    public AudioClip backgroundLvl1;
+    public AudioClip backgroundLvl2;
+    public AudioClip bossMusic;
     public AudioClip pickup;
     public AudioClip healingPickup;
     public AudioClip update;
