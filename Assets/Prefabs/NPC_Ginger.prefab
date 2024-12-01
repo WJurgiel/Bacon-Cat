@@ -135,7 +135,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: -507978459
+  m_SortingLayerID: -2010694857
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &1854022774520718013
@@ -257,8 +257,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -507978459
-  m_SortingLayer: 4
+  m_SortingLayerID: 713697659
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -977145073362360747, guid: 62b6c17dbea9a66469255dd63bc8ae77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -310,6 +310,7 @@ MonoBehaviour:
   userHint: {fileID: 2392005352365070920}
   requiredItem: 2
   equipmentSystem: {fileID: 0}
+  moralitySystem: {fileID: 0}
 --- !u!114 &868923272968889318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,6 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb208fa4dbac3040a69376cbfc32ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueLineID: 1
 --- !u!1 &4525393164043998699
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +428,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 25ddb8e18d832398
+  m_ApplyToSortingLayers: cdfb69a7373b27887b298a2a257a660a
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0

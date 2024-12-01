@@ -70,12 +70,14 @@ public class PlayerInteraction : MonoBehaviour
             other.gameObject.GetComponent<dtrigger>().StartDialogue(8);
             other.gameObject.SetActive(false);
         }
+
         if (other.transform.CompareTag("d9"))
         {
             other.gameObject.GetComponent<dtrigger>().StartDialogue(9);
             other.gameObject.SetActive(false);
+        }
 
-            if (other.transform.CompareTag("Pouch"))
+        if (other.transform.CompareTag("Pouch"))
             {
                 Destroy(other.gameObject);
                 equipmentSystem.GivePouch();
@@ -105,6 +107,6 @@ public class PlayerInteraction : MonoBehaviour
                     badEndingPanel.SetActive(true);
                 }
             }
-        }
+        
     }
 }

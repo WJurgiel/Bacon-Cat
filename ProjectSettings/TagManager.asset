@@ -10,8 +10,11 @@ TagManager:
   - Orb
   - Bacon
   - Audio
-
-  - Manager
+  - EndGame
+  - Pouch
+  - SpellBook
+  - Key
+  - AudioManager
   - d1
   - d2
   - d3
@@ -21,13 +24,6 @@ TagManager:
   - d7
   - d8
   - d9
-  - EnemyTrigger
-  - Pouch
-  - Key
-  - SpellBook
-  - AudioManager
-  - EndGame
-
   layers:
   - Default
   - TransparentFX
@@ -35,8 +31,8 @@ TagManager:
   - 
   - Water
   - UI
-  - Wall
-  - Background
+  - 
+  - 
   - 
   - 
   - 
@@ -66,19 +62,19 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
-    uniqueID: 4164158107
-    locked: 0
-  - name: Player
-    uniqueID: 852922889
+    uniqueID: 3989884067
     locked: 0
   - name: Map
-    uniqueID: 2552464269
+    uniqueID: 2284272439
     locked: 0
   - name: Actors
-    uniqueID: 3786988837
+    uniqueID: 713697659
     locked: 0
-  - name: Eyes
-    uniqueID: 2921325923
+  - name: Player
+    uniqueID: 174488101
+    locked: 0
+  - name: Ground
+    uniqueID: 2808740813
     locked: 0
   m_RenderingLayers:
   - Default
