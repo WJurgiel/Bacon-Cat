@@ -10,16 +10,18 @@ public class DialogueManager : MonoBehaviour
 {
     public TMP_Text nameText;
     public TMP_Text dialogueText;
-    public Canvas dialogueCanvas;
+    public GameObject dialogueCanvas;
     private Queue<DialogueLine> sentences;
     public bool isDialogueActive = false;
     private bool isCorutineActive= false;
     private DialogueLine sentence;
     private DialogueData dialogueData;
     [SerializeField] private float timeBetweenLetter = 0.01f;
+    [SerializeField] private string[] filePaths = new string[3];
+    private int CurrentFileIndex = 0;
     private void Awake()
     {
-        readFromFile();
+        SetCurrentFileIndex(0);
     }
 
     void Start()
@@ -32,9 +34,16 @@ public class DialogueManager : MonoBehaviour
         if (isDialogueActive) ChangeSentence();
         
     }
+
+    public void SetCurrentFileIndex(int fileIndex)
+    {
+        CurrentFileIndex = fileIndex;
+        readFromFile();
+    }
     private void readFromFile()
     {
-        string filePath = Application.dataPath + "/Dialogues/tutorial.json";
+        string filePath = Application.dataPath + $"/Dialogues/{filePaths[CurrentFileIndex]}.json";
+        // string filePath = Application.dataPath + "/Dialogues/tutorial.json";
         
         if (File.Exists(filePath))
         {
@@ -78,7 +87,7 @@ public class DialogueManager : MonoBehaviour
         sentences.Clear();
         foreach (DialogueLine dialogueLine in dialogue.conversation) sentences.Enqueue(dialogueLine);
         
-        dialogueCanvas.gameObject.SetActive(true);
+        dialogueCanvas.SetActive(true);
         DisplayNextSentence();
     }
 
@@ -111,7 +120,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         StartCoroutine(ChangeDialogueActive());
-        dialogueCanvas.gameObject.SetActive(false);
+        dialogueCanvas.SetActive(false);
     }
     
     IEnumerator ChangeDialogueActive()

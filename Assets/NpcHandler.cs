@@ -8,19 +8,30 @@ public class NpcHandler : MonoBehaviour
     [SerializeField] private GameObject userHint;
     [SerializeField] private InventoryItems requiredItem;
     [SerializeField] private EquipmentSystem equipmentSystem;
+    private DialogueManager dialogueManager;
+    private DialogueTrigger dialogueTrigger;
     private bool isPlayerInRange;
     private Transform player;
+    private int dialogueLineID = 1;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         equipmentSystem = FindObjectOfType<EquipmentSystem>();
+        dialogueManager = FindObjectOfType<DialogueManager>();
+        dialogueTrigger = FindObjectOfType<DialogueTrigger>();
         isPlayerInRange = false;
     }
 
     void Update()
     {
        CheckDistance();
-       if(isPlayerInRange && Input.GetKeyDown(KeyCode.F)) CheckIfHasItem();
+       if (isPlayerInRange && Input.GetKeyDown(KeyCode.F))
+       {
+           CheckIfHasItem();
+           dialogueManager.SetCurrentFileIndex(npcId);
+           dialogueTrigger.UpdateDialogueLineID(dialogueLineID);
+           dialogueTrigger.TriggerDialogue();
+       }
     }
 
     private void CheckDistance()
@@ -50,7 +61,7 @@ public class NpcHandler : MonoBehaviour
     {
         if (equipmentSystem.GetPickedUpItems()[(int)requiredItem])
         {
-            Debug.Log("Yupiii");
+            dialogueLineID = 2;
         }
         else
         {
@@ -59,3 +70,4 @@ public class NpcHandler : MonoBehaviour
     }
     
 }
+ 

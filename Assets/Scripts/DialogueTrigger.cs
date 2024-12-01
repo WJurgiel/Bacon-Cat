@@ -3,12 +3,16 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public int id;
-    
+    private int dialogueLineID = 1;
+
+    public void UpdateDialogueLineID(int dialogueLineID)
+    {
+        this.dialogueLineID = dialogueLineID;
+    }
     public void TriggerDialogue()
     {
         DialogueManager dm = FindObjectOfType<DialogueManager>();
-        dm.StartDialogue(id);
+        dm.StartDialogue(dialogueLineID);
         Debug.Log(dm.name);
     }
 }

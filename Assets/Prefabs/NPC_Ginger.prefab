@@ -94,7 +94,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2611576153439537054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 2851072622328026892}
   - component: {fileID: 1237318804429231251}
   - component: {fileID: 868923272968889318}
+  - component: {fileID: 4602789224304122432}
   m_Layer: 0
   m_Name: NPC_Ginger
   m_TagString: Untagged
@@ -304,10 +305,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de58a5c23b56ce4db41c9cef01c9244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcId: 0
+  npcId: 1
   rangeToInteract: 3
   userHint: {fileID: 2392005352365070920}
-  requiredItem: 3
+  requiredItem: 2
   equipmentSystem: {fileID: 0}
 --- !u!114 &868923272968889318
 MonoBehaviour:
@@ -361,6 +362,18 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+--- !u!114 &4602789224304122432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2816165534622972476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb208fa4dbac3040a69376cbfc32ce5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4525393164043998699
 GameObject:
   m_ObjectHideFlags: 0
