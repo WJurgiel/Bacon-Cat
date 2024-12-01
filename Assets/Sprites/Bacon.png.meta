@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bacon_0: 4638073604318642339
+      Bacon_1: 46726371528118730
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
