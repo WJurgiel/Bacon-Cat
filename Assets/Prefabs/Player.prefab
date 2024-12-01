@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 452416612161330153}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.3403883, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 9190150437588020700}
   - component: {fileID: 4355257412124304363}
   - component: {fileID: 6210496654379764108}
+  - component: {fileID: 7608171297437332708}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -317,9 +318,10 @@ MonoBehaviour:
   speed: 10
   jumpForce: 15
   maxJumpCounts: 2
+  spellPrefab: {fileID: 0}
+  orbSpawner: {fileID: 452416612161330153}
   camera: {fileID: 0}
   equipmentSystem: {fileID: 4355257412124304363}
-  attackComponents: {fileID: 6210496654379764108}
   isWallSliding: 0
   wallSlidingSpeed: 5
   wallCheck: {fileID: 8279846682367238748}
@@ -454,12 +456,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9759e9206682e724badaae6de915670e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackBall: {fileID: 0}
   light: {fileID: 0}
   scaleMultipler: 1.008
   startingVector: {x: 0.2, y: 0.2, z: 1}
-  speed: 0.1
-  distance: 3.5
+  speed: []
+  isSpelling: 0
+  damageMultipliers:
+  - 0
+  - 310
+  - 210
+  - 210
+  range:
+  - 0
+  - 15
+  - 5
+  - 6
+  damage: 0
+--- !u!114 &7608171297437332708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102980456049890175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 387f4d8d0f96b1a4a913eb38b653b799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSanity: 100
+  currentSanity: 0
+  baconRegainAmount: 10
+  eyesInTheShadow: {fileID: 0}
+  eyesRenderer:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8326339377196052436
 GameObject:
   m_ObjectHideFlags: 0

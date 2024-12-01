@@ -8,6 +8,7 @@ TagManager:
   - Firefly
   - Enemy
   - Orb
+  - Bacon
   layers:
   - Default
   - TransparentFX
@@ -56,6 +57,9 @@ TagManager:
     locked: 0
   - name: Actors
     uniqueID: 3786988837
+    locked: 0
+  - name: Eyes
+    uniqueID: 2921325923
     locked: 0
   m_RenderingLayers:
   - Default
