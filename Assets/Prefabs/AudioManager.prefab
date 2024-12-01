@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1039002059511292483}
   - component: {fileID: 4068559719601980381}
+  - component: {fileID: 7543561457315900048}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Audio
@@ -41,7 +42,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562035063611712418}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33d1ee40fda627b4e9b069099db4416e, type: 3}
   m_Name: 
@@ -64,6 +65,36 @@ MonoBehaviour:
   falling: {fileID: 8300000, guid: 906a296e6f17cc841bd3310bebc37e48, type: 3}
   fireplace: {fileID: 8300000, guid: 60bde59dfef50d7429c7f004d9be79e9, type: 3}
   killedBoss: {fileID: 8300000, guid: 4c4663550e3846e47b33b8e62710bf5f, type: 3}
+--- !u!114 &7543561457315900048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562035063611712418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f93758f48604e4c85e5393fe9dcc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 5696871861140826393}
+  sfxSource: {fileID: 2416235109247541208}
+  background: {fileID: 0}
+  backgroundLvl1: {fileID: 8300000, guid: 07fe9cf0e71dec849bdc0b7c09f493a4, type: 3}
+  backgroundLvl2: {fileID: 0}
+  bossMusic: {fileID: 0}
+  pickup: {fileID: 0}
+  healingPickup: {fileID: 0}
+  update: {fileID: 0}
+  enemySound: {fileID: 0}
+  flyingSound: {fileID: 0}
+  buttonError: {fileID: 0}
+  menuClick: {fileID: 0}
+  gameStart: {fileID: 0}
+  laughter: {fileID: 0}
+  falling: {fileID: 0}
+  fireplace: {fileID: 0}
+  killedBoss: {fileID: 0}
 --- !u!1 &1612043474961816461
 GameObject:
   m_ObjectHideFlags: 0
