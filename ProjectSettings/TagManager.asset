@@ -10,6 +10,7 @@ TagManager:
   - Orb
   - Bacon
   - Audio
+  - Manager
   layers:
   - Default
   - TransparentFX

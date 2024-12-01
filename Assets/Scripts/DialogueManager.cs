@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     private DialogueData dialogueData;
     [SerializeField] private float timeBetweenLetter = 0.01f;
     [SerializeField] private string[] filePaths = new string[3];
-    private int CurrentFileIndex = 0;
+    [SerializeField]private int CurrentFileIndex = 0;
     private void Awake()
     {
         SetCurrentFileIndex(0);
