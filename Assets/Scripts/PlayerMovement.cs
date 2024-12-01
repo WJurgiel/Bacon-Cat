@@ -72,15 +72,23 @@ public class PlayerMovement : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {
+
+
         if (isDead) return;
         // if (dialogueManager.isDialogueActive) return;
-        if (equipmentSystem.GetPanel().activeSelf)
+        if (equipmentSystem.GetPanel().activeSelf || dialogueManager.isDialogueActive)
         {
             StopPlayer();
             UpdateAnimation();
             return;
         }
+        if (equipmentSystem.GetPanel().activeSelf)
+        {
+            StopPlayer();
+            return;
+        }
+
+
 
         HandleHorizontalMovement();
         HandleJumpInput();
@@ -96,6 +104,12 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (dialogueManager.isDialogueActive)
+        {
+            StopPlayer();
+            // UpdateAnimation();
+            return;
+        }
         if (equipmentSystem.GetPanel().activeSelf)
         {
             StopPlayer();
