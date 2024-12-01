@@ -6,9 +6,11 @@ public class Firecamp : MonoBehaviour
     [SerializeField] private float range;
     private bool isPlayerInRange;
     [SerializeField] public GameObject UserHint;
+    private SanitySystem sanitySystem;
     void Start()
     {
         isPlayerInRange = false;
+        sanitySystem  =player.gameObject.GetComponent<SanitySystem>();
     }
 
     void Update()
@@ -31,6 +33,11 @@ public class Firecamp : MonoBehaviour
                 UserHint.SetActive(false);
             }
             
+        }
+
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.F))
+        {
+            sanitySystem.FireplaceMeditate();
         }
     }
 }

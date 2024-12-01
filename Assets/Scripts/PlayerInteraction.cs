@@ -6,10 +6,13 @@ public class PlayerInteraction : MonoBehaviour
 {
     FireFlyContainer fireFlyContainer;
     EquipmentSystem equipmentSystem;
+    SanitySystem sanitySystem;
     void Start()
     {
         fireFlyContainer = FindObjectOfType<FireFlyContainer>();
         equipmentSystem = FindObjectOfType<EquipmentSystem>();
+        sanitySystem = FindObjectOfType<SanitySystem>();
+        
         Debug.Log(fireFlyContainer);
         
     }
@@ -20,6 +23,12 @@ public class PlayerInteraction : MonoBehaviour
             equipmentSystem.AddFirefly();
             Destroy(other.gameObject);
             
+        }
+
+        if (other.transform.CompareTag("Bacon"))
+        {
+            sanitySystem.RegainSanity();
+            Destroy(other.gameObject);
         }
     }
 }

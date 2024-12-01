@@ -8,6 +8,7 @@ TagManager:
   - Firefly
   - Enemy
   - Orb
+  - Bacon
   layers:
   - Default
   - TransparentFX
