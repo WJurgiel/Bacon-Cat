@@ -10,6 +10,7 @@ TagManager:
   - Orb
   - Bacon
   - Audio
+
   - Manager
   - d1
   - d2
@@ -21,6 +22,12 @@ TagManager:
   - d8
   - d9
   - EnemyTrigger
+  - Pouch
+  - Key
+  - SpellBook
+  - AudioManager
+  - EndGame
+
   layers:
   - Default
   - TransparentFX

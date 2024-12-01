@@ -1,0 +1,145 @@
+{
+  "dialogSequences": [
+    {
+      "id": 1,
+      "conversation": [
+        {
+          "character": "Void",
+          "text": "Witaj, maly podrozniku! Nie boj sie, jestem Void, straznik tej niezwykłej planety."
+        },
+        {
+          "character": "Void",
+          "text": "Widze, ze twoja podroz mogla cie nieco zaskoczyc… ale spokojnie, jestes w dobrych rekach!"
+        },
+        {
+          "character": "Void",
+          "text": "Pozwol, ze cie naucze, jak poruszac sie po tym miejscu. To bedzie przygoda, jakiej jeszcze nie znales!"
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "conversation": [
+        {
+          "character": "Void",
+          "text": "Na poczatek nauczmy sie podstaw! Uzyj klawisza A, aby isc w lewo, i D, aby poruszac się w prawo."
+        },
+        {
+          "character": "Void",
+          "text": "To proste, prawda? Sprobuj teraz!"
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "conversation": [
+        {
+          "character": "Void",
+          "text": "Ach, a co, jesli cos ci stanie na drodze? Nie martw się, w tym swiecie wszystko jest możzliwe."
+        },
+        {
+          "character": "Void",
+          "text": "Wcisnij spacje lub W, aby skoczyc! Sprobuj, maly przyjacielu, zobaczysz, jakie to proste i przyjemne."
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "conversation": [
+        {
+          "character": "Void",
+          "text": "Och, widze, ze jestes ambitny! A co, jesli chcialbys siegnac nieco wyzej? Sprobuj podwojnego skoku!"
+        },
+        {
+          "character": "Void",
+          "text": "Wcisnij spacje lub W, aby skoczyc! Sprobuj, maly przyjacielu, zobaczysz, jakie to proste i przyjemne."
+        }
+      ]
+    },
+
+    {
+      "id": 5,
+      "conversation": [
+        {
+          "character": "Void",
+          "text": "Och, spójrz na te piękne świetliki! Są pełne magicznej energii, która zasili twoją latarnię, umieściłem ją na twoim ogonie. "
+        },
+        {
+          "character": "Void",
+          "text": "Wystarczy, ze do nich podejdziesz, a wtedy trafia one do twojego ekwipunku (E/PPM). To takie proste, a jakie uzyteczne."
+        }
+      ]
+    },
+
+    {
+      "id": 6,
+      "conversation": [
+        {
+          "character": "Void",
+          "text": "Och, czy zauwazyles, ze twoja latarnia troche przygasla? Bez swiatla ta planeta moze byc bardzo nieprzyjazna."
+        },
+        {
+          "character": "Void",
+          "text": "Ale nie martw się, masz swietliki! Nacisnij klawisz TAB, aby zasilic latarnie i znow rozjasnic ciemnosc. Wyprobuj to teraz!"
+        }
+      ]
+    },
+
+    {
+      "id": 7,
+      "conversation": [
+        {
+          "character": "Ty",
+          "text": "Hmm... czy ja go skads znam?"
+        },
+        {
+          "character": "Void",
+          "text": "Och, coż to za… uciazliwa istota! Wyglada niegroznie, ale uwierz mi, lepiej się jej pozbyc."
+        },
+        {
+          "character": "Void",
+          "text": "Widzisz ta bron ktora lewituje przy tobie? Mozesz jej uzyc klikajac LPM."
+        },
+        {
+          "character": "Void",
+          "text": "To nic zlego, tylko chronisz siebie! Zaufaj mi, kochany, to dla twojego dobra."
+        }
+      ]
+    },
+
+    {
+      "id": 8,
+      "conversation": [
+        {
+          "character": "Void",
+          "text": "Nie martw się, kotku, odpoczynek niczego nie zmieni… tylko na chwile zatuszuje rzeczywistosc."
+        },
+        {
+          "character": "Void",
+          "text": "Cos mowi mi, ze jeszcze nie rozumiesz, jak naprawde dziala ten swiat... ale z czasem sie nauczysz. Hahaha…"
+        }
+      ]
+    },
+
+    {
+      "id": 9,
+      "conversation": [
+        {
+          "character": "Void",
+          "text": "Ahaha… och, maly kociaku, czy naprawde myslales, ze to wszystko jest takie... niewinne?"
+        },
+        {
+          "character": "Void",
+          "text": "Witaj w moim swiecie – swiecie Void! Teraz jestes gotowy na prawdziwa zabawe..."
+        },
+        {
+          "character": "Void",
+          "text": "Nie martw sie, moj maly przyjacielu. Nie musisz sie bac… jeszcze."
+        }
+      ]
+    }
+  ]
+}

@@ -13,6 +13,8 @@ public class LyricsDisplayer : MonoBehaviour
     [SerializeField] private string endSceneName = "MainMenu";
     [SerializeField] private float fadeDuration = 2.0f;
     [SerializeField] private float blackOverlayDuration = 2.0f;
+    
+    AudioManagerIntro audioManagerIntro;
 
     private string[] lyrics = {
         "KOSMOSY PRZEMIERZA, NA PLASTERKU BEKONU",
@@ -28,6 +30,17 @@ public class LyricsDisplayer : MonoBehaviour
 
     private int currentLineIndex = 0;
     private bool isSkipping = false;
+
+    private void Awake()
+    {
+        audioManagerIntro = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerIntro>();
+
+        if (audioManagerIntro != null)
+        {
+            // Ustaw zapÄ™tlanie i odtwÃ³rz dÅºwiÄ™k za pomocÄ… AudioManagerIntro
+            audioManagerIntro.PlayLoopedSound();
+        }
+    }
 
     private void Start()
     {
@@ -104,12 +117,12 @@ public class LyricsDisplayer : MonoBehaviour
     private IEnumerator ChangeSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(endSceneName);
+        SceneManager.LoadScene(1);
     }
 
     private void SkipIntro()
     {
-        // Natychmiast aktywuj czarne t³o i przejdŸ do sceny koñcowej
+        // Natychmiast aktywuj czarne tï¿½o i przejdï¿½ do sceny koï¿½cowej
         if (blackOverlay != null)
         {
             blackOverlay.SetActive(true);
@@ -120,7 +133,7 @@ public class LyricsDisplayer : MonoBehaviour
                 canvasGroup = blackOverlay.AddComponent<CanvasGroup>();
             }
 
-            canvasGroup.alpha = 1f; // Ustaw pe³n¹ widocznoœæ czarnego t³a
+            canvasGroup.alpha = 1f; // Ustaw peï¿½nï¿½ widocznoï¿½ï¿½ czarnego tï¿½a
         }
 
         SceneManager.LoadScene(endSceneName);

@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -12,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject spellPrefab;
     private GameObject spawnedSpell;
     public GameObject orbSpawner;
+    private bool isDead;
     
     private Vector2 movement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -29,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
     
+    AudioManagerTutorial audioManager;
     //Wall Jumping
     private bool isWallJumping;
     private float wallJumpingDirection;
@@ -40,7 +43,15 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private float wallJumpingDuration = 0.5f;
     private void Awake()
-    {
+    {   
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManagerTutorial>();
+
+        if (audioManager != null)
+        {
+            // Ustaw zapętlanie i odtwórz dźwięk za pomocą AudioManagerIntro
+            audioManager.PlayLoopedSound();
+        }
+        
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -52,12 +63,20 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb2d.gravityScale = 4f;
+        isDead = false;
     }
 
+    public void Die()
+    {
+        isDead = true;
+    }
     // Update is called once per frame
     void Update()
-    {
-        if (dialogueManager.isDialogueActive)
+
+
+        if (isDead) return;
+        // if (dialogueManager.isDialogueActive) return;
+        if (equipmentSystem.GetPanel().activeSelf || dialogueManager.isDialogueActive)
         {
             StopPlayer();
             UpdateAnimation();
@@ -76,11 +95,11 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimation();
         WallSlide();
         WallJump();
-        Cast();
-        if (Input.GetKeyDown(KeyCode.U))
+        if (equipmentSystem.GetPickedUpItems()[(int)InventoryItems.ORB] == true)
         {
-            attackComponents.upgrade();
-        }
+            Cast();
+        } 
+        
     }
 
     void FixedUpdate()
