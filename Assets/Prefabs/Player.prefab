@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &452416612161330153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6112563483844530597}
+  m_Layer: 0
+  m_Name: orbSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6112563483844530597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452416612161330153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 961224535177072679}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3923339763053774339
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +148,7 @@ GameObject:
   - component: {fileID: 665773844078220672}
   - component: {fileID: 9190150437588020700}
   - component: {fileID: 4355257412124304363}
+  - component: {fileID: 6210496654379764108}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -133,12 +165,13 @@ Transform:
   m_GameObject: {fileID: 5102980456049890175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 2.65, z: 0}
+  m_LocalPosition: {x: -2.561058, y: -0.8286133, z: 0}
   m_LocalScale: {x: 1.0942876, y: 0.9665, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8279846682367238748}
   - {fileID: 9010856698443863900}
+  - {fileID: 6112563483844530597}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8462200382307788048
@@ -284,7 +317,9 @@ MonoBehaviour:
   speed: 10
   jumpForce: 15
   maxJumpCounts: 2
-  equipmentSystem: {fileID: 0}
+  camera: {fileID: 0}
+  equipmentSystem: {fileID: 4355257412124304363}
+  attackComponents: {fileID: 6210496654379764108}
   isWallSliding: 0
   wallSlidingSpeed: 5
   wallCheck: {fileID: 8279846682367238748}
@@ -407,6 +442,24 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &6210496654379764108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102980456049890175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9759e9206682e724badaae6de915670e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackBall: {fileID: 0}
+  light: {fileID: 0}
+  scaleMultipler: 1.008
+  startingVector: {x: 0.2, y: 0.2, z: 1}
+  speed: 0.1
+  distance: 3.5
 --- !u!1 &8326339377196052436
 GameObject:
   m_ObjectHideFlags: 0
