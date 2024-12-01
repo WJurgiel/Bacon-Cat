@@ -14,12 +14,15 @@ public class SanitySystem : MonoBehaviour
    [SerializeField] private List<SpriteRenderer> eyesRenderer;
 
    [SerializeField] private float timeToDisolve = 1f;
+   [SerializeField] private GameObject deathScene;
+   private PlayerMovement playerMovement;
    private float dissolveTimer = 0f;
    // Sanity to zdrowie, odzyskiwanie przy ognisku
    // sanity wskazywane jest przez to jak wielkie oczy som
    
    void Start()
    {
+      playerMovement = GetComponent<PlayerMovement>();
       currentSanity = maxSanity;
       UpdateEyes();
    }
@@ -42,9 +45,14 @@ public class SanitySystem : MonoBehaviour
       UpdateEyes();
    }
 
-   private bool isDead()
+   private void CheckIfDead()
    {
-      return currentSanity <= 0;
+      if (currentSanity <= 0)
+      {
+         playerMovement.Die();
+         deathScene.SetActive(true);
+         
+      }
    }
    public void FireplaceMeditate()
    {
@@ -56,6 +64,7 @@ public class SanitySystem : MonoBehaviour
    {
       currentSanity -= amount;
       UpdateEyes();
+      CheckIfDead();
    }
 
    private void CheckSanityIntegrity()

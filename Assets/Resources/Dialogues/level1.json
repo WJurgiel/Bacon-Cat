@@ -1,0 +1,42 @@
+{
+  "dialogSequences": [
+    {
+      "id": 1,
+      "conversation": [
+        {
+          "character": "Straznik Rudy",
+          "text": "Zatrzymaj sie. Przejscie wymaga dowodu twojej intencji."
+        },
+        {
+          "character": "Straznik Rudy",
+          "text": "(przyglada się uwaznie)"
+        },
+        {
+          "character": "Straznik Rudy",
+          "text": "Te oczy... Czy to naprawde ty? Wedrowiec, ktory nigdy nie wraca?"
+        },
+
+        {
+          "character": "Ty",
+          "text": "To ja. Pamietam cie – byles tam, gdy swietliki ostatni raz rozswietlily niebo. Uratowales mnie wtedy."
+        },
+
+        {
+          "character": "Straznik Rudy",
+          "text": "Tak, ale zasady pozostaja zasadami. Cos musisz oddac. Znajdz cos, co tylko kot rozumiejacy otchlan moze przyniesc."
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "conversation": [
+        {
+          "character": "Straznik Rudy",
+          "text": "To jest to. Wiedzialem, ze znajdziesz droge. Idz dalej... Ale pamietaj, otchlan widzi wszystko."
+        }
+      ]
+    }
+
+  ]
+}
