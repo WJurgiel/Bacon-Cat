@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 71b9c632e4d631e4fa04d39137febc24
+guid: dea35be09265f7b4eb111a45ef6f7071
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4133365558781053392
-    second: kot-na-bekonie 1_0
+      213: -7199661311398357026
+    second: Eyes_1_0
+  - first:
+      213: 1525849061290653360
+    second: Eyes_1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kot-na-bekonie 1_0
+      name: Eyes_1_0
       rect:
         serializedVersion: 2
-        x: 86
-        y: 58
-        width: 280
-        height: 253
+        x: 629
+        y: 534
+        width: 253
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 036750e7ce553a6c0800000000000000
-      internalID: -4133365558781053392
+      spriteID: ed75af6ce2aa51c90800000000000000
+      internalID: -7199661311398357026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes_1_1
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 538
+        width: 253
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b6b71f03a7ec2510800000000000000
+      internalID: 1525849061290653360
       vertices: []
       indices: 
       edges: []
@@ -134,8 +159,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      kot-na-bekonie 1_0: -4133365558781053392
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
