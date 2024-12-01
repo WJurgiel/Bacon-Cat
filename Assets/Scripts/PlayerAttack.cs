@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -11,8 +13,14 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] float speed = 0.1f;
     [SerializeField] float distance = 1f;
     private int numberOfMoves = 100;
-    private GameObject spawner;
-    private bool isSpelling = true;
+    private GameObject spawner = null;
+    public bool isSpelling = false;
+    public float damage;
+
+    private void Start()
+    {
+        damage = 100f;
+    }
 
     void Update()
     {
@@ -31,6 +39,7 @@ public class PlayerAttack : MonoBehaviour
     public void stopCasting(Vector3 moveDirection)
     {
         isSpelling = false;
+        damage = (transform.localScale.x - startingVector.x) *210f;
         light.pointLightOuterRadius = transform.localScale.x;
         StopAllCoroutines();
         StartCoroutine(MoveSpell(moveDirection));

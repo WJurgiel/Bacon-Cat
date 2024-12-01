@@ -101,6 +101,8 @@ public class PlayerMovement : MonoBehaviour
             Quaternion spawnRotation = Quaternion.identity;
             spawnedSpell = Instantiate(spellPrefab, spawnPosition, spawnRotation);
             attackComponents = spawnedSpell.GetComponent<PlayerAttack>();
+            attackComponents.isSpelling = true;
+            Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), attackComponents.gameObject.GetComponent<Collider2D>(), true);
             attackComponents.castSpell(orbSpawner);
 
         }
@@ -166,6 +168,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             jumpCount = 0;
+        }
+        else if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("Kicius dostaje obrazenia");
         }
     }
 
