@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/FINALIntroScene.unity
+    guid: ef8fc9e5f1820534aa9d1ae85e77b236
+  - enabled: 1
+    path: Assets/Scenes/FINALMainMenu.unity
     guid: 1b1af29ec7c9df14b95fbfaf5c479082
   - enabled: 1
     path: Assets/Scenes/forest-tilemap-tutorial.unity

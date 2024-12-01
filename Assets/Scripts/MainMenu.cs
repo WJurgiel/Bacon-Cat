@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour
     }
     public void NewGame()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex+1);
         audioManager.PlaySfx(audioManager.menuClick);
     }
     public void ShowSettings()
