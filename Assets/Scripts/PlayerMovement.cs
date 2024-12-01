@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -70,11 +71,11 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimation();
         WallSlide();
         WallJump();
-        Cast();
-        if (Input.GetKeyDown(KeyCode.U))
+        if (equipmentSystem.GetPickedUpItems()[(int)InventoryItems.ORB] == true)
         {
-            attackComponents.upgrade();
-        }
+            Cast();
+        } 
+        
     }
 
     void FixedUpdate()

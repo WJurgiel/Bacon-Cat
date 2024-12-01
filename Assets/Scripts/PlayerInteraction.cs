@@ -42,5 +42,10 @@ public class PlayerInteraction : MonoBehaviour
             Destroy(other.gameObject);
             equipmentSystem.GiveKey();
         }
+        if (other.transform.CompareTag("SpellBook"))
+        {
+            Destroy(other.gameObject);
+            equipmentSystem.GiveOrb();
+        }
     }
 }

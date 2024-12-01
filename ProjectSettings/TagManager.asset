@@ -11,6 +11,7 @@ TagManager:
   - Bacon
   - Pouch
   - Key
+  - SpellBook
   layers:
   - Default
   - TransparentFX
