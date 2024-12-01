@@ -115,10 +115,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition = camera.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 1));
-            Debug.Log(mousePosition - orbSpawner.transform.position);
             moveDirection = (mousePosition - orbSpawner.transform.position).normalized;
-            Debug.Log("2:");
-            Debug.Log(moveDirection);
             attackComponents.stopCasting(moveDirection);
         }
     }
