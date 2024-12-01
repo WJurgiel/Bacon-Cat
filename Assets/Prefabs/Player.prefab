@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000992d6328d832398
+  m_ApplyToSortingLayers: 000000000992d6328d83239825ddb8e1
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 7608171297437332708}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -318,7 +318,7 @@ MonoBehaviour:
   speed: 10
   jumpForce: 15
   maxJumpCounts: 2
-  spellPrefab: {fileID: 0}
+  spellPrefab: {fileID: 612515680063727160, guid: 13049a6a41b268f49ae477a402807219, type: 3}
   orbSpawner: {fileID: 452416612161330153}
   camera: {fileID: 0}
   equipmentSystem: {fileID: 4355257412124304363}
@@ -486,13 +486,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSanity: 100
   currentSanity: 0
-  baconRegainAmount: 10
+  baconRegainAmount: 40
   eyesInTheShadow: {fileID: 0}
   eyesRenderer:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  timeToDisolve: 2
 --- !u!1 &8326339377196052436
 GameObject:
   m_ObjectHideFlags: 0
