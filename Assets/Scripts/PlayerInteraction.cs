@@ -30,5 +30,17 @@ public class PlayerInteraction : MonoBehaviour
             sanitySystem.RegainSanity();
             Destroy(other.gameObject);
         }
+
+        if (other.transform.CompareTag("Pouch"))
+        {
+            Destroy(other.gameObject);
+            equipmentSystem.GivePouch();
+        }
+
+        if (other.transform.CompareTag("Key"))
+        {
+            Destroy(other.gameObject);
+            equipmentSystem.GiveKey();
+        }
     }
 }

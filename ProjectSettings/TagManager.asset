@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Orb
   - Bacon
+  - Pouch
+  - Key
   layers:
   - Default
   - TransparentFX
